@@ -1,0 +1,1348 @@
+[
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=animecix.net&sz=%size%",
+        "fileHash": "sha256-d825f9f6ce7f62da07c5349ffdba698b90f016bc53cd1d436f52831f7f6a91f1",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 22592,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Anime"
+        ],
+        "version": 8,
+        "internalName": "AnimeciX",
+        "description": "AnimeciX, animeleri ke\u015ffedebilece\u011finiz ve animeler hakk\u0131nda her \u015feyi \u00f6\u011frenebilece\u011finiz bir payla\u015f\u0131m platformudur.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/AnimeciX.cs3",
+        "name": "AnimeciX"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=animeler.live&sz=%size%",
+        "fileHash": "sha256-ee63b8d13a204deba02dff934390767002a5234bb713edfaf3d5fbbeeb641808",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 19056,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Anime",
+            "AnimeMovie"
+        ],
+        "version": 1,
+        "internalName": "Animeler",
+        "description": "Animeler - T\u00fcrk\u00e7e altyaz\u0131l\u0131 ve dublajl\u0131 anime ar\u015fivi",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/Animeler.cs3",
+        "name": "Animeler"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=asyawatch.com&sz=%size%",
+        "fileHash": "sha256-2f2bc3c5d4c4f0edd75348b70fd0e65054e3518fcf9afe52d4ed3668a508063d",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 32799,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "AsyaWatch",
+        "description": "AsyaWatch ile Kore ve Asya dizilerini, filmlerini T\u00fcrk\u00e7e altyaz\u0131l\u0131 izleyin.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/AsyaWatch.cs3",
+        "name": "AsyaWatch"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=atv.com.tr&sz=%size%",
+        "fileHash": "sha256-37747c3327d02bf3fcf690ce01847713916bb350c071d8927b7bf12261403afd",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 16454,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "AtvDizi",
+        "description": "ATV resm\u00ee sitesindeki diziler ve \u00fccretsiz b\u00f6l\u00fcmler",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/AtvDizi.cs3",
+        "name": "AtvDizi"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=belgeselx.com&sz=%size%",
+        "fileHash": "sha256-3876b10585c1359fb3b5c77a776a2db4270d063010a726328a7d8004d96769fb",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 27641,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Documentary"
+        ],
+        "version": 1,
+        "internalName": "BelgeselX",
+        "description": "BelgeselX ile T\u00fcrk\u00e7e dublaj ve altyaz\u0131l\u0131 HD belgeselleri reklams\u0131z izleyin.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/BelgeselX.cs3",
+        "name": "BelgeselX"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=beyaztv.com.tr&sz=%size%",
+        "fileHash": "sha256-bd9b059807566bca45ffc48f55eca969133642614859e73652c7d02b7e0d748f",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 14598,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "BeyazTV",
+        "description": "Beyaz TV'nin program ar\u015fivini T\u00fcrk\u00e7e olarak izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/BeyazTV.cs3",
+        "name": "BeyazTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=bloomberght.com&sz=%size%",
+        "fileHash": "sha256-0f3735e8fde2686e1e0ae2ee6a2664d73b336c5b73f64b0fcd6b2b870692f415",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 12270,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "BloombergHT",
+        "description": "Bloomberg HT'nin haber, program ve piyasa videolar\u0131n\u0131 izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/BloombergHT.cs3",
+        "name": "BloombergHT"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=www.canlitv.com&sz=%size%",
+        "fileHash": "sha256-875bd8db98b532a61b02083870087ad9fa28704a0fd022580afec54f5c52e953",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 21321,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 5,
+        "internalName": "CanliTV",
+        "description": "Herkese a\u00e7\u0131k T\u00fcrkiye IPTV listesindeki \u00fccretsiz canl\u0131 TV kanallar\u0131.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/CanliTV.cs3",
+        "name": "CanliTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=cnnturk.com&sz=%size%",
+        "fileHash": "sha256-bf4cdd022342c1dd68b95370de3b2a2a5ed39b0f3a3b26cac6772a5a82a4957b",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 11868,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "CNNTurk",
+        "description": "CNN T\u00fcrk'\u00fcn haber, spor, ekonomi ve magazin videolar\u0131n\u0131 izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/CNNTurk.cs3",
+        "name": "CNNTurk"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=cumhuriyet.com.tr&sz=%size%",
+        "fileHash": "sha256-e2e97ad001f792dc64819cc3266971f4a126a12e5890cba6823d7f6edd98df49",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 14206,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "CumhuriyetTV",
+        "description": "Cumhuriyet TV'nin video haberlerini Dailymotion \u00fczerinden izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/CumhuriyetTV.cs3",
+        "name": "CumhuriyetTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=ddizi.tel&sz=%size%",
+        "fileHash": "sha256-88f072165f13f0df1357c32c2b559122d9fa4f0a45112a1fe096fd4a47768c3d",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 27254,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "DDizi",
+        "description": "DDizi - Yabanc\u0131 dizi izle",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/DDizi.cs3",
+        "name": "DDizi"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=dizibal.org&sz=%size%",
+        "fileHash": "sha256-d3b3b4792dfc49b65813e99819932f931df290f898958b9c4769fdac794a3019",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 26570,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie",
+            "Anime"
+        ],
+        "version": 1,
+        "internalName": "DiziBal",
+        "description": "DiziBal - Yabanc\u0131 dizi, film ve anime ar\u015fivi",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/DiziBal.cs3",
+        "name": "DiziBal"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=dizibol.org&sz=%size%",
+        "fileHash": "sha256-1ca7d56344f554d718a1f219b9654bc2c35801914d3cec32bcd40bd8e999188a",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 26533,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie",
+            "Anime"
+        ],
+        "version": 1,
+        "internalName": "DiziBol",
+        "description": "DiziBol - Yabanc\u0131 dizi, film ve anime ar\u015fivi",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/DiziBol.cs3",
+        "name": "DiziBol"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=dizigecesi.com&sz=%size%",
+        "fileHash": "sha256-fa1d5ce2fdaff88d48fef9dee763256cd239dbdc38d9015af868468a3b3aaaa6",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 19958,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "Dizigecesi",
+        "description": "Dizigecesi - Yabanc\u0131 dizi ve film ar\u015fivi",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/Dizigecesi.cs3",
+        "name": "Dizigecesi"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=dizigom.news&sz=%size%",
+        "fileHash": "sha256-d13a90c567fde3f225ec9962c34810fea9616305b83a4965fbb1aaf794909f07",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 18016,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "DiziGom",
+        "description": "DiziGom ile yabanc\u0131 dizileri T\u00fcrk\u00e7e altyaz\u0131l\u0131 ve Full HD kalitede takip edin.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/DiziGom.cs3",
+        "name": "DiziGom"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=dizilla.now&sz=%size%",
+        "fileHash": "sha256-1a4dd30e1e76a0e18ffac1685777288301c1c7399c3423815cf61eeb0971620f",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 30592,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "Dizilla",
+        "description": "Dizilla ile yabanc\u0131 dizileri T\u00fcrk\u00e7e dublaj ve T\u00fcrk\u00e7e altyaz\u0131l\u0131 se\u00e7enekleriyle 1080p kalitede izleyin.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/Dizilla.cs3",
+        "name": "Dizilla"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=www.dizidad.com&sz=%size%",
+        "fileHash": "sha256-aec13f04ff48d7ffc4e67edad6c58ca34c6441f31fe3c434a6b5fc93e3861e2e",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 34140,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "DiziMom",
+        "description": "Binlerce yerli ve yabanc\u0131 dizi ar\u015fivi, t\u00fcm sezonlar, kesintisiz b\u00f6l\u00fcmler. Sadece dizi izle, Dizimom her yerde seninle!",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/DiziMom.cs3",
+        "name": "DiziMom"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=dizipal3008.com&sz=%size%",
+        "fileHash": "sha256-5e2409f75e83bb0ff39633caa93059e86f032073733f3dea35acce3d34b76403",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 29334,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "DiziPal",
+        "description": "DiziPal ile dizileri ve filmleri T\u00fcrk\u00e7e dublaj veya altyaz\u0131l\u0131 olarak h\u0131zl\u0131 ve g\u00fcvenli \u015fekilde izleyin.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/DiziPal.cs3",
+        "name": "DiziPal"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=dizipod.com&sz=%size%",
+        "fileHash": "sha256-a567162fbab8b889c021abe2264c4244500f23ff80dabfff93e367589bba97ee",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 20167,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "Dizipod",
+        "description": "Dizipod ile yabanc\u0131 dizileri ve filmleri T\u00fcrk\u00e7e altyaz\u0131l\u0131 olarak Full HD kalitede izleyin.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/Dizipod.cs3",
+        "name": "Dizipod"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=dizirella.one&sz=%size%",
+        "fileHash": "sha256-423c32e66f5213a7562c6a5079ba0058b87f930829b1a78124419fa59ba6725e",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 14932,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "DiziRella",
+        "description": "DiziRella - Yabanc\u0131 ve Asya dizileri, T\u00fcrk\u00e7e dublaj ve altyaz\u0131l\u0131",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/DiziRella.cs3",
+        "name": "DiziRella"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=diziroll.club&sz=%size%",
+        "fileHash": "sha256-c444f24cead7fb5417375da4bda12e3e1cb6d22d364b4004676ab267d11dc932",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 19643,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "DiziRoll",
+        "description": "DiziRoll - T\u00fcrk\u00e7e dublaj ve altyaz\u0131l\u0131 yabanc\u0131 dizi ar\u015fivi",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/DiziRoll.cs3",
+        "name": "DiziRoll"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=www.diziyou.co&sz=%size%",
+        "fileHash": "sha256-3166891593e14b4ae41bf3d5043522e0e3ee6d70e919ce97b981dc1fbafff7cf",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 15095,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 8,
+        "internalName": "DiziYou",
+        "description": "Diziyou en kaliteli T\u00fcrk\u00e7e dublaj ve altyaz\u0131l\u0131 yabanc\u0131 dizi izleme sitesidir. G\u00fcncel ve efsanevi dizileri 1080p Full HD kalitede izlemek i\u00e7in hemen t\u0131kla!",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/DiziYou.cs3",
+        "name": "DiziYou"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=128&domain=dramadizilerim.com",
+        "fileHash": "sha256-add437a2aff9148b541e8dc09f3084f7d6e45eca54162889039cea04238218ef",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 15561,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "AsianDrama"
+        ],
+        "version": 1,
+        "internalName": "DramaDizilerim",
+        "description": "DramaDizilerim - Kore, \u00c7in ve Asya K\u0131sa/Uzun Dizileri T\u00fcrk\u00e7e Altyaz\u0131l\u0131",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/DramaDizilerim.cs3",
+        "name": "DramaDizilerim"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=filmdozu.com&sz=%size%",
+        "fileHash": "sha256-2128474c18e4b66087cdc45567a3fba7559695e2e2a992c2b8d95cbb0cd264a0",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 21611,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 2,
+        "internalName": "FilmDozu",
+        "description": "FilmDozu ile yerli ve yabanc\u0131 filmleri T\u00fcrk\u00e7e dublaj veya T\u00fcrk\u00e7e altyaz\u0131l\u0131, Full HD kalitede izleyin.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/FilmDozu.cs3",
+        "name": "FilmDozu"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=filmmakinesi.to&sz=%size%",
+        "fileHash": "sha256-6264465ea59b93ab8e336ae41dce9371d072157cf541c95dde848ce71b87aaf8",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 23183,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 8,
+        "internalName": "FilmMakinesi",
+        "description": "Film Makinesi, en yeni ve en g\u00fcncel filmleri sitemizde full HD kalite fark\u0131 ile izleyebilirsiniz. HD film izle denildi\u011finde akla gelen en kaliteli film izleme sitesi.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/FilmMakinesi.cs3",
+        "name": "FilmMakinesi"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=www.filmmodu.one&sz=%size%",
+        "fileHash": "sha256-c1ef65d69eb81c106f28cb808438dc29dd8b542e0388e3deb69406f8c91f14a0",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 15957,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "FilmModu",
+        "description": "FilmModu ile en yeni filmleri T\u00fcrk\u00e7e dublaj ve altyaz\u0131 se\u00e7enekleriyle 1080p kalitede izleyin.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/FilmModu.cs3",
+        "name": "FilmModu"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=www.fullhdfilmizlesene.now&sz=%size%",
+        "fileHash": "sha256-b221a7b2ac00c4c5d42c3e53f306b57cc43a2e179b0fe8f44d1d4a02978b3736",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 34712,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 6,
+        "internalName": "FullHDFilmizlesene",
+        "description": "Sinema zevkini evinize kadar getirdik. T\u00fcrkiye'nin lider Film sitesinde, en yeni filmleri Full HD izleyin.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/FullHDFilmizlesene.cs3",
+        "name": "FullHDFilmizlesene"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=haberglobal.com&sz=%size%",
+        "fileHash": "sha256-b5f4bb01cf773887e9a1c86f2008a03c0d2e5787ecc403acc08368c3c4378275",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 17468,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "HaberGlobal",
+        "description": "Haber Global'in haber ve program videolar\u0131n\u0131 izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/HaberGlobal.cs3",
+        "name": "HaberGlobal"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=haberturk.com&sz=%size%",
+        "fileHash": "sha256-796c031667e954bf108944b725ada8f051f739468ffb1e60c8944dae19f539cb",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 12967,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "HaberTurk",
+        "description": "HaberT\u00fcrk'\u00fcn haber, spor, ekonomi ve magazin videolar\u0131n\u0131 izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/HaberTurk.cs3",
+        "name": "HaberTurk"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=hdfilmcehennemi.com&sz=%size%",
+        "fileHash": "sha256-dd826263733213f272a5a7d54b4704930708e48113496239c10ff89289ee0e62",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 26271,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 19,
+        "internalName": "HDFilmCehennemi",
+        "description": "T\u00fcrkiye'nin en h\u0131zl\u0131 hd film izleme sitesi",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/HDFilmCehennemi.cs3",
+        "name": "HDFilmCehennemi"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=hdfilmdelisi.one&sz=%size%",
+        "fileHash": "sha256-63e5712f003e72a9a7ad5c81667ac7d79fe3a204253b23d07b1d1516c6900cf9",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 16496,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "HDFilmDelisi",
+        "description": "HDFilmDelisi - T\u00fcrk\u00e7e dublaj ve altyaz\u0131l\u0131 film ar\u015fivi",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/HDFilmDelisi.cs3",
+        "name": "HDFilmDelisi"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=hurriyet.com.tr&sz=%size%",
+        "fileHash": "sha256-45d7e169c4f1fd68418a60a5c98739203a51251cf5ecf65ca50f6b90f7279be0",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 15397,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "HurriyetTV",
+        "description": "H\u00fcrriyet TV ve Spor Arena videolar\u0131n\u0131 Dailymotion \u00fczerinden izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/HurriyetTV.cs3",
+        "name": "HurriyetTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=internethaber.com&sz=%size%",
+        "fileHash": "sha256-f1764aa07637ed1eaf101965b568ea0131b3a40256223b5d22d9cc258dd1a444",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 11516,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "InternetHaber",
+        "description": "\u0130nternet Haber'in video galerisini ve haber videolar\u0131n\u0131 izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/InternetHaber.cs3",
+        "name": "InternetHaber"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=izle7.com&sz=%size%",
+        "fileHash": "sha256-3648ab31a0e1227860d9edd4b4299ce556e23804aa656b757242ce33b5759515",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 23017,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "Izle7",
+        "description": "Kanal 7'nin dizi, film ve program ar\u015fivini T\u00fcrk\u00e7e olarak izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/Izle7.cs3",
+        "name": "Izle7"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=jetfilmizle.app&sz=%size%",
+        "fileHash": "sha256-c7ceb01ef9bce20fc238869737b951d3dfef63553eed7a882ab90f83c0ecff99",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 24697,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "JetFilmizle",
+        "description": "JetFilmizle ile binlerce filmi T\u00fcrk\u00e7e dublaj ve altyaz\u0131 se\u00e7enekleriyle Full HD izleyin.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/JetFilmizle.cs3",
+        "name": "JetFilmizle"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=kanal7.com&sz=%size%",
+        "fileHash": "sha256-55cab939b0172835ae82d12971d68928af48efa336717e6169913db5e0ebe2d8",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 8522,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "Kanal7Canli",
+        "description": "Kanal 7 ve Kanal 7 Avrupa'n\u0131n resm\u00ee canl\u0131 yay\u0131nlar\u0131n\u0131 izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/Kanal7Canli.cs3",
+        "name": "Kanal7Canli"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=kanald.com.tr&sz=%size%",
+        "fileHash": "sha256-d23fd59e924010230fd4fbb1c13b3262c0d853f33cedb4992294af3973d3af27",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 14179,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "KanalD",
+        "description": "KanalD - Kanal D'nin g\u00fcncel ve ar\u015fiv dizilerini T\u00fcrk\u00e7e olarak izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/KanalD.cs3",
+        "name": "KanalD"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=koreanturk.tv&sz=%size%",
+        "fileHash": "sha256-18dc5fd0896f2299f94c9d34ee50b382a4b5a981c144e941834314b3ab1184f6",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 20684,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "KoreanTurk",
+        "description": "KoreanTurk - T\u00fcrk\u00e7e altyaz\u0131l\u0131 Kore dizileri ve filmleri",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/KoreanTurk.cs3",
+        "name": "KoreanTurk"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=krttv.com.tr&sz=%size%",
+        "fileHash": "sha256-26e945ce5d84f05e0341330d9768205fd0c0050e1b92ee06f2893508b06b360c",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 16022,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "KRT",
+        "description": "KRT TV'nin haber videolar\u0131n\u0131 ve video galerisini izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/KRT.cs3",
+        "name": "KRT"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=kultfilmler.net&sz=%size%",
+        "fileHash": "sha256-8abe43976942168ed62afa1b9f0b3f3e4df203978764d687c3b51c636a179ace",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 23443,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "KultFilmler",
+        "description": "K\u00fclt Filmler ile \u00f6zenle se\u00e7ilmi\u015f k\u00fclt filmleri ve dizileri T\u00fcrk\u00e7e altyaz\u0131l\u0131 izleyin.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/KultFilmler.cs3",
+        "name": "KultFilmler"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=medyahaber.com&sz=%size%",
+        "fileHash": "sha256-dd505fd15df46c75d6080e5e359b39134aed5f5999bd1d4ba90ec555d0dcb444",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 12384,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "MedyaHaber",
+        "description": "Medya Haber'in video galerisini ve haber videolar\u0131n\u0131 izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/MedyaHaber.cs3",
+        "name": "MedyaHaber"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=milliyet.com.tr&sz=%size%",
+        "fileHash": "sha256-eed1ea8d84278f81b32bf7ecf08e8bc1dde64ab5dbc5cb16c496cd9680820885",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 15019,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "MilliyetTV",
+        "description": "Milliyet TV'nin haber videolar\u0131n\u0131 Dailymotion \u00fczerinden izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/MilliyetTV.cs3",
+        "name": "MilliyetTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=nowtv.com.tr&sz=%size%",
+        "fileHash": "sha256-ac162fb7f99c7dcc7f6fd3679e84eb4cbc9fc846d039c98d6a49f9171d114a35",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 21232,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "NowTV",
+        "description": "NowTV - NOW'un g\u00fcncel dizi, film ve programlar\u0131n\u0131 T\u00fcrk\u00e7e olarak izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/NowTV.cs3",
+        "name": "NowTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=rarefilmm.com&sz=%size%",
+        "fileHash": "sha256-26406813d9375378bda6ce43f72ef89a604b03700252b9dca119eed4717ffe04",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 16887,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 2,
+        "internalName": "RareFilmm",
+        "description": "The Cave of Forgotten Films",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/RareFilmm.cs3",
+        "name": "RareFilmm"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=selcukflix.app&sz=%size%",
+        "fileHash": "sha256-fbb8e66e2b987b10e4a37fc48793c98d7ee97719ff6bc61de2350981daa1c4a1",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 46906,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "SelcukFlix",
+        "description": "SelcukFlix - Yabanc\u0131 dizi ve film izle",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/SelcukFlix.cs3",
+        "name": "SelcukFlix"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=setfilmizle.ltd&sz=%size%",
+        "fileHash": "sha256-5ea21216465dbc3a053bd889a0361da5077a28ae063d0526ab40137029b9da55",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 31269,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "SetFilmIzle",
+        "description": "SetFilmIzle - T\u00fcrk\u00e7e dublaj ve altyaz\u0131l\u0131 film, dizi",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/SetFilmIzle.cs3",
+        "name": "SetFilmIzle"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=sezonlukdizi.cc&sz=%size%",
+        "fileHash": "sha256-ed97f91240e259e9b538714a0512242c00152593b0e233c7e2061cfc95c62065",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 30987,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "SezonlukDizi",
+        "description": "SezonlukDizi - G\u00fcncel ve eski dizileri en iyi g\u00f6r\u00fcnt\u00fc kalitesiyle izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/SezonlukDizi.cs3",
+        "name": "SezonlukDizi"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=sezonlukdizi.one&sz=%size%",
+        "fileHash": "sha256-7bb2443d50102679b10f01acd29e1f356fc2ea517c3c4ab8d428b348c732fa39",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 19978,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "SezonlukFilm",
+        "description": "SezonlukFilm - T\u00fcrk\u00e7e dublaj ve altyaz\u0131l\u0131 film ar\u015fivi",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/SezonlukFilm.cs3",
+        "name": "SezonlukFilm"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=showtv.com.tr&sz=%size%",
+        "fileHash": "sha256-889d7033b55fd7194c1b7b4628e01bd06bcaf58a1bce1565ff4685ba13366efa",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 13753,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "ShowTV",
+        "description": "ShowTV - Show TV'nin g\u00fcncel ve ar\u015fiv dizilerini T\u00fcrk\u00e7e olarak izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/ShowTV.cs3",
+        "name": "ShowTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?sz=128&domain=startv.com.tr",
+        "fileHash": "sha256-7224862cffb5cfabcbcaac12aac73b7ff51373fbc81a58fd14756fc2ff9f1125",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 22147,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "StarTV",
+        "description": "Star TV resmi T\u00fcrk dizileri ve tam b\u00f6l\u00fcmleri",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/StarTV.cs3",
+        "name": "StarTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=tabii.com&sz=%size%",
+        "fileHash": "sha256-77c7eb0e177e92afa4ef67b374b15433892e5a702b9c597f95ab1b42fdffe7e6",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 18444,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie",
+            "Documentary"
+        ],
+        "version": 1,
+        "internalName": "Tabii",
+        "description": "Tabii - TRT\u2019nin resm\u00ee dijital platformu",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/Tabii.cs3",
+        "name": "Tabii"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=tele1.com.tr&sz=%size%",
+        "fileHash": "sha256-5ee21e9258fa56af76ab1840d223ff0ad17e7f9a3e4076024800a04adfc8b40e",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 13441,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "Tele1",
+        "description": "Tele1'in haber videolar\u0131n\u0131 ve programlar\u0131n\u0131 izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/Tele1.cs3",
+        "name": "Tele1"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=tgrthaber.com&sz=%size%",
+        "fileHash": "sha256-4dc38d4caf5d5460766a04506b6f44064fe958c421e2a86f9e3c407dd1413362",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 11588,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "TGRTHaber",
+        "description": "TGRT Haber'in g\u00fcndem, d\u00fcnya, ekonomi ve spor videolar\u0131n\u0131 izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/TGRTHaber.cs3",
+        "name": "TGRTHaber"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=trtbelgesel.com.tr&sz=%size%",
+        "fileHash": "sha256-47e753bec8c98cc35bd84a2c774a2527654f4d76c39782b6bbfe35e6668e25bf",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 15664,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Documentary",
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "TrtBelgesel",
+        "description": "TRT Belgesel - Resm\u00ee belgesel programlar\u0131, b\u00f6l\u00fcmleri ve canl\u0131 yay\u0131n\u0131",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/TrtBelgesel.cs3",
+        "name": "TrtBelgesel"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=trt1.com.tr&sz=%size%",
+        "fileHash": "sha256-426e053f5a603bf53abe33768ad39925b3a9ef161ce6b332da80e3fe8c0fcd93",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 9611,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "TRTCanli",
+        "description": "TRT'nin resm\u00ee canl\u0131 TV kanallar\u0131n\u0131 tek listede izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/TRTCanli.cs3",
+        "name": "TRTCanli"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=tv100.com&sz=%size%",
+        "fileHash": "sha256-b170a77c073c877fe5fe1b9d254fb67b1b705b149aaf0609e989168c9b6f248f",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 11313,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "TV100",
+        "description": "TV100'\u00fcn son dakika haber videolar\u0131n\u0131 ve programlar\u0131n\u0131 izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/TV100.cs3",
+        "name": "TV100"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=tv2.com.tr&sz=%size%",
+        "fileHash": "sha256-635fc62ca5754a92a0bdd14352e1c9a99f8560033279d0ead4e6256a8e42dbb6",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 19269,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "TV2",
+        "description": "TV2'nin dizi, film ve program ar\u015fivini T\u00fcrk\u00e7e olarak izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/TV2.cs3",
+        "name": "TV2"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=tv8.com.tr&sz=%size%",
+        "fileHash": "sha256-414a73da401ff4d90757cc8bca47e172524eca9ff49a7fc9b526cede69b28a74",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 12909,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "TV8",
+        "description": "TV8 - TV8'in dizi ve programlar\u0131n\u0131 T\u00fcrk\u00e7e olarak izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/TV8.cs3",
+        "name": "TV8"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=tvdiziler.cc&sz=%size%",
+        "fileHash": "sha256-7eb020be20bcf0092889c1e12eff5765b81560c2d4d2e486ad10323ea0e02d89",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 28470,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "TvDiziler",
+        "description": "TvDiziler - Yerli ve yabanc\u0131 dizi",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/TvDiziler.cs3",
+        "name": "TvDiziler"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=tvnet.com.tr&sz=%size%",
+        "fileHash": "sha256-477fd2960ede4bd3fcd19ad1ea0b7ca6da5d8e1e5d0f3897678e44fe0d808811",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 6313,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 1,
+        "internalName": "TVNET",
+        "description": "TVNET'in resm\u00ee canl\u0131 yay\u0131n\u0131n\u0131 izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/TVNET.cs3",
+        "name": "TVNET"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=ulketv.com&sz=%size%",
+        "fileHash": "sha256-9959d03b21c1496effbf81e3ad85a724269686ab52d87390bf4c51b48719b3fb",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 12041,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "UlkeTV",
+        "description": "\u00dclke TV'nin haber videolar\u0131n\u0131 ve video galerisini izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/UlkeTV.cs3",
+        "name": "UlkeTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=webdramaturkey2.com&sz=%size%",
+        "fileHash": "sha256-4fe6e37d90834a9078f89ba2e084c65108be88fc84a3ba99c16ef9ecc76e2951",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 27794,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "WebDramaTurkey",
+        "description": "Web Drama Turkey - T\u00fcrk\u00e7e altyaz\u0131l\u0131 Kore, \u00c7in ve Japon dizileri",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/WebDramaTurkey.cs3",
+        "name": "WebDramaTurkey"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=webteizle2.com&sz=%size%",
+        "fileHash": "sha256-2ee0e624a1ddd6b74ee3ced9f52f1fdb7453b930aed0b043c9ce6b1be819997c",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 28799,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 16,
+        "internalName": "WebteIzle",
+        "description": "Her t\u00fcrl\u00fc filmi ister dublaj ister altyaz\u0131l\u0131, en kaliteli bir \u015fekilde izleyebilece\u011finiz ar\u015fivi en geni\u015f ger\u00e7ek film izleme siteniz.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/WebteIzle.cs3",
+        "name": "WebteIzle"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=yabancidizi.news&sz=%size%",
+        "fileHash": "sha256-abd64877682fe52890045000f9c804245f63e5e50f49db18c51750b381ab7955",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 35312,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 2,
+        "internalName": "YabanciDizi",
+        "description": "yabanc\u0131dizi ile yabanc\u0131 dizileri ve filmleri T\u00fcrk\u00e7e altyaz\u0131l\u0131 veya T\u00fcrk\u00e7e dublaj se\u00e7enekleriyle izleyin.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/YabanciDizi.cs3",
+        "name": "YabanciDizi"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=yirmidort.tv&sz=%size%",
+        "fileHash": "sha256-0e8222c11430324663dea4301f74a4b5bf0a06044bf800ea5171ce07fa0db79c",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 9924,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "YirmidortTV",
+        "description": "Yirmid\u00f6rt TV'nin haber videolar\u0131n\u0131 ve video galerisini izleyin",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/YirmidortTV.cs3",
+        "name": "YirmidortTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=youtube.com&sz=%size%",
+        "fileHash": "sha256-eb20ed4eeacc44ae1e34d793c311a397cd0c46a0d7ed15858f1a98b673b7a453",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/JustSadY/Cloudstream-Lykia",
+        "fileSize": 16440,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "JustSadY"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 5,
+        "internalName": "YouTube",
+        "description": "YouTube, izledi\u011finiz videolarla \u00f6nerilerini iyile\u015ftirir. \u0130lginizi \u00e7ekebilecek i\u00e7eriklerle dolu bir ak\u0131\u015f olu\u015fturmak i\u00e7in video izlemeye ba\u015flay\u0131n.",
+        "url": "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/YouTube.cs3",
+        "name": "YouTube"
+    }
+]
