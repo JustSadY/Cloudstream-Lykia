@@ -1,0 +1,227 @@
+@file:Suppress("DEPRECATION", "DEPRECATION_ERROR")
+
+package com.lykia
+
+import org.jsoup.nodes.Element
+import com.lagradost.cloudstream3.*
+import com.lagradost.cloudstream3.utils.*
+import com.lagradost.cloudstream3.network.CloudflareKiller
+import okhttp3.Interceptor
+import okhttp3.Response
+import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
+
+class JetFilmizle : MainAPI() {
+    private val cloudflareKiller by lazy { CloudflareKiller() }
+    private val interceptor by lazy { CloudflareInterceptor(cloudflareKiller) }
+
+    class CloudflareInterceptor(private val cloudflareKiller: CloudflareKiller): Interceptor {
+        override fun intercept(chain: Interceptor.Chain): Response {
+            val request = chain.request()
+            val response = chain.proceed(request)
+            if (response.peekBody(1024 * 1024).string().contains("Just a moment")) {
+                return cloudflareKiller.intercept(chain)
+            }
+            return response
+        }
+    }
+    override var mainUrl              = "https://jetfilmizle.app"
+    override var name                 = "JetFilmizle"
+    override val hasMainPage          = true
+    override var lang                 = "tr"
+    override val hasQuickSearch       = false
+    override var supportedTypes       = setOf(TvType.Movie)
+
+    override val mainPage = mainPageOf(
+        "${mainUrl}/filmler?page="           to "Son Filmler",
+        "${mainUrl}/turkce-dublaj?page="     to "Türkçe Dublaj",
+        "${mainUrl}/turkce-altyazili?page="  to "Türkçe Altyazılı",
+        "${mainUrl}/orijinal-filmler?page="  to "Orijinal Filmler",
+        "${mainUrl}/yerli-filmler?page="     to "Yerli Filmler"
+    )
+
+    override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
+        val document = app.get("${request.data}${page}", interceptor = interceptor).document
+        val home     = document.select("div.film-card").mapNotNull { it.toSearchResult() }
+
+        return newHomePageResponse(request.name, home)
+    }
+
+    private fun Element.toSearchResult(): SearchResponse? {
+        val wrapper = this.selectFirst("div.film-card-wrapper > a[href]") ?: this.selectFirst("a[href]")
+        val href    = fixUrlNull(wrapper?.attr("href")) ?: return null
+        if (!href.contains("/film/")) return null
+
+        var title = this.selectFirst("h3.fc-title")?.text()?.trim()
+            ?: this.selectFirst("h3.film-title-line a")?.text()?.trim()
+            ?: this.selectFirst("a[title]")?.attr("title")?.trim()
+            ?: return null
+        title = title.substringBefore(" Full").substringBefore(" İzle").trim()
+        if (title.isBlank()) return null
+
+        val poster = fixUrlNull(this.selectFirst("div.film-poster img")?.attr("src"))
+            ?: fixUrlNull(this.selectFirst("img")?.attr("src"))
+
+        val type = TvType.Movie
+        return newMovieSearchResponse(title, href, type) { this.posterUrl = poster }
+    }
+
+    override suspend fun search(query: String): List<SearchResponse> {
+        val document = app.get("${mainUrl}/arama?q=${query.replace(" ", "+")}", interceptor = interceptor).document
+
+        return document.select("div.film-card").mapNotNull { it.toSearchResult() }
+    }
+
+    override suspend fun quickSearch(query: String): List<SearchResponse> = search(query)
+
+    override suspend fun load(url: String): LoadResponse? {
+        val document = app.get(url, interceptor = interceptor).document
+
+        val player = document.selectFirst("#active-player")
+        val title  = player?.attr("data-film-title")?.trim()?.takeIf { it.isNotBlank() }
+            ?: document.selectFirst("h1.film-title")?.text()?.substringBefore("(")?.trim()
+            ?: return null
+
+        val jsonLd = document.select("script[type=application/ld+json]").joinToString("\n") { it.data() }
+
+        val poster = fixUrlNull(player?.attr("data-film-poster"))?.let { normalize(it) }
+            ?: fixUrlNull(document.selectFirst("meta[property=og:image]")?.attr("content"))
+        val year = player?.attr("data-film-year")?.toIntOrNull()
+            ?: Regex("\"datePublished\"\\s*:\\s*\"(\\d{4})\"").find(jsonLd)?.groupValues?.get(1)?.toIntOrNull()
+        val duration = player?.attr("data-film-duration")?.toIntOrNull()
+            ?: Regex("\"duration\"\\s*:\\s*\"PT(\\d+)M\"").find(jsonLd)?.groupValues?.get(1)?.toIntOrNull()
+        val rating = player?.attr("data-film-rating")?.toDoubleOrNull()?.let { (it * 10).toInt() }
+            ?: Regex("\"ratingValue\"\\s*:\\s*\"?([0-9.]+)").find(jsonLd)?.groupValues?.get(1)
+                ?.toDoubleOrNull()?.let { (it * 10).toInt() }
+
+        val description = document.selectFirst("div.film-description div.description-text")?.text()?.trim()
+            ?: document.selectFirst("div.film-description")?.text()?.trim()
+            ?: fixUrlNull(document.selectFirst("meta[name=description]")?.attr("content"))
+
+        val tags = Regex("\"genre\"\\s*:\\s*\\[([^\\]]*)\\]").find(jsonLd)?.groupValues?.get(1)
+            ?.split(",")?.map { it.trim().trim('"') }?.filter { it.isNotBlank() } ?: listOf()
+
+        val actors = Regex("\"actor\"\\s*:\\s*\\[(.*?)\\]\\s*,").find(jsonLd)?.groupValues?.get(1)
+            ?.let { block -> Regex("\"name\"\\s*:\\s*\"([^\"]+)\"").findAll(block).map { it.groupValues[1] }.toList() }
+            ?: listOf()
+
+        val recommendations = document.select("div.similar-film-item div.film-card").mapNotNull { it.toSearchResult() }
+
+        val isSeries = url.contains("/dizi/")
+
+        if (isSeries) {
+            return newTvSeriesLoadResponse(title, url, TvType.TvSeries, emptyList()) {
+                this.posterUrl = poster
+                this.year      = year
+                this.plot      = description
+                this.tags      = tags
+                this.rating    = rating
+                this.duration  = duration
+                this.recommendations = recommendations
+                addActors(actors.map { Actor(it) })
+            }
+        }
+
+        return newMovieLoadResponse(title, url, TvType.Movie, url) {
+            this.posterUrl = poster
+            this.year      = year
+            this.plot      = description
+            this.tags      = tags
+            this.rating    = rating
+            this.duration  = duration
+            this.recommendations = recommendations
+            addActors(actors.map { Actor(it) })
+        }
+    }
+
+    private fun normalize(url: String): String = when {
+        url.startsWith("//") -> "https:$url"
+        url.startsWith("/")  -> "$mainUrl$url"
+        else                 -> url
+    }
+
+    override suspend fun loadLinks(
+        data: String,
+        isCasting: Boolean,
+        subtitleCallback: (SubtitleFile) -> Unit,
+        callback: (ExtractorLink) -> Unit
+    ): Boolean {
+        val document = app.get(data, interceptor = interceptor).document
+        val filmId   = document.selectFirst("input[name=film_id]")?.attr("value")?.trim().orEmpty()
+        if (filmId.isBlank()) return false
+
+        val buttons = document.select(".player-source-btn[data-source-index][data-player-type]")
+            .distinctBy { it.attr("data-source-index") + "|" + it.attr("data-player-type") }
+
+        var emitted = 0
+        val seen    = HashSet<String>()
+
+        for (button in buttons.take(8)) {
+            val playerType = button.attr("data-player-type").ifBlank { "dublaj" }
+            val sourceIdx  = button.attr("data-source-index")
+
+            val playerCode = app.post(
+                "${mainUrl}/jetplayer",
+                referer = data,
+                data    = mapOf(
+                    "film_id"      to filmId,
+                    "source_index" to sourceIdx,
+                    "player_type"  to playerType
+                ),
+                headers = mapOf("X-Requested-With" to "XMLHttpRequest")
+            ).text
+
+            val embed = Regex("""iframe[^>]*\ssrc=['"]([^'"]+)['"]""").find(playerCode)?.groupValues?.get(1)?.trim()
+                ?: continue
+            if (!seen.add(embed)) continue
+            if (embed.contains("fragman", true)) continue
+
+            emitted += resolveEmbed(embed, data, subtitleCallback) { link -> callback(link) }
+            if (emitted > 0) break
+        }
+
+        return emitted > 0
+    }
+
+    private suspend fun resolveEmbed(embed: String, referer: String, subtitleCallback: (SubtitleFile) -> Unit, callback: (ExtractorLink) -> Unit): Int {
+        if (embed.contains("videopark.top")) {
+            val page = app.get(embed, referer = referer, interceptor = interceptor).text
+            val worker = Regex("""WORKER_(?:BASE|URL)\s*=\s*["']([^"']+)["']""").find(page)?.groupValues?.get(1)
+                ?: return 0
+            val videoId = Regex("""VIDEO_ID\s*=\s*["']?(\d+)["']?""").find(page)?.groupValues?.get(1) ?: return 0
+            val base    = worker.trimEnd('/')
+
+            val info = app.get("$base/api/video?id=$videoId", referer = embed, interceptor = interceptor).text
+
+            var emitted = 0
+
+            val hls = Regex(""""hlsSource"\s*:\s*\{[\s\S]{0,400}?"file"\s*:\s*"(https?://[^"]+)"""")
+                .find(info)?.groupValues?.get(1)
+            if (!hls.isNullOrBlank()) {
+                callback(newExtractorLink(source = "JetFilmizle", name = "HLS", url = hls, type = ExtractorLinkType.M3U8) {
+                    this.referer = embed
+                    this.quality = Qualities.Unknown.value
+                })
+                emitted++
+            }
+
+            val mp4s = Regex(""""mp4Sources"\s*:\s*\[([\s\S]{0,2000}?)\]""").find(info)?.groupValues?.get(1).orEmpty()
+            Regex("""(https?://[^"'\s\\]+\.mp4[^"'\s\\]*)""").findAll(mp4s).map { it.groupValues[1] }
+                .distinct().forEach { mp4 ->
+                    callback(newExtractorLink(source = "JetFilmizle", name = "MP4", url = mp4, type = ExtractorLinkType.VIDEO) {
+                        this.referer = embed
+                        this.quality = Qualities.Unknown.value
+                    })
+                    emitted++
+                }
+
+            return emitted
+        }
+
+        var emitted = 0
+        loadExtractor(embed, referer, subtitleCallback) { link ->
+            emitted++
+            callback(link)
+        }
+        return emitted
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "name": "Cloudstream-Lykia | Türkçe Eklentiler",
+    "description": "CloudStream için Türkçe içerikli eklenti deposu",
+    "manifestVersion": 1,
+    "pluginLists": [
+      "https://raw.githubusercontent.com/JustSadY/Cloudstream-Lykia/builds/plugins.json"
+    ]
+}
