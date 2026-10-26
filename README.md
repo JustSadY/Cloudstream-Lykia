@@ -38,6 +38,7 @@ Durum sütunu, [test aracıyla](#-test-aracı) 26 Ekim 2026'da yapılan uçtan u
 | **FilmMakinesi** | filmmakinesi.to | Film | CloseLoad, Rapid | ✅ |
 | **FullHDFilmizlesene** | fullhdfilmizlesene.now | Film | RapidVid | ✅ |
 | **HDFilmCehennemi** | hdfilmcehennemi.nl | Film, Dizi | Rapidrame (dublaj + altyazı) | ✅ |
+| **HDFilmDelisi** | hdfilmdelisi.one | Film | Kendi oynatıcısı (MP4) | ✅ |
 | **WebteIzle** | webteizle.info | Film | VidMoly | ✅ (CAPTCHA'lı kaynaklar atlanıyor) |
 | **KultFilmler** | kultfilmler.net | Film, Dizi | VidMoly, VidPapi (HLS) | ✅ |
 | **DiziYou** | diziyou.one | Dizi | Kendi oynatıcısı (dublaj + orijinal) | ✅ |
@@ -45,11 +46,31 @@ Durum sütunu, [test aracıyla](#-test-aracı) 26 Ekim 2026'da yapılan uçtan u
 | **AsyaWatch** | asyawatch.com | Dizi, Film | FourPichive (HLS) | ✅ |
 | **DramaDizilerim** | dramadizilerim.com | Asya Dizisi | Embed HLS/MP4 | ✅ |
 | **StarTV** | startv.com.tr | Dizi | Kendi oynatıcısı (HLS) | ✅ |
+| **ShowTV** | showtv.com.tr | Dizi | Kendi oynatıcısı (HLS) | ✅ |
+| **KanalD** | kanald.com.tr | Dizi | Kendi oynatıcısı (HLS) | ✅ |
+| **TV8** | tv8.com.tr | Dizi, Program | Kendi oynatıcısı (HLS, MP4) | ✅ |
+| **NowTV** | nowtv.com.tr | Dizi, Program | Kendi oynatıcısı (HLS) | ✅ |
+| **Izle7** | izle7.com | Dizi, Film | Dailymotion (HLS) | ✅ |
+| **TV2** | tv2.com.tr | Dizi, Film, Program | Kendi oynatıcısı (HLS) | ✅ |
 | **DiziMom** | dizidad.com | Dizi | HDPlayerSystem (HLS) | ✅ |
 | **SezonlukDizi** | sezonlukdizi.cc | Dizi | Byse/Filemoon (HLS) | ✅ |
+| **SezonlukFilm** | sezonlukdizi.one | Film | VideoSeyred (HLS) | ✅ |
 | **TvDiziler** | tvdiziler.cc | Dizi | Kendi oynatıcısı (HLS) | ✅ |
 | **DDizi** | ddizi.tel | Dizi | Kendi oynatıcısı (HLS) | ✅ |
+| **AtvDizi** | atv.com.tr | Dizi | Kendi oynatıcısı (MP4) | ✅ |
+| **DiziBal** | dizibal.org | Dizi, Film, Anime | Pilavyer (HLS) | ✅ |
+| **DiziBol** | dizibol.org | Dizi, Film, Anime | Pilavyer (HLS) | ✅ |
+| **DiziRella** | dizirella.one | Dizi | Kendi oynatıcısı (HLS) | ✅ |
+| **DiziRoll** | diziroll.club | Dizi | FourPichive, Pichive (HLS) | ✅ |
+| **Dizigecesi** | dizigecesi.com | Dizi, Film | VidMoly, P2P (HLS) | ✅ |
+| **SelcukFlix** | selcukflix.app | Dizi, Film | Pichive (HLS) | ✅ |
+| **KoreanTurk** | koreanturk.tv | Asya Dizisi, Film | Kendi oynatıcısı (HLS) | ✅ |
+| **SetFilmIzle** | setfilmizle.ltd | Film, Dizi | SetPlay (HLS) | ✅ |
+| **WebDramaTurkey** | webdramaturkey2.com | Asya Dizisi, Film | dtpasn.asia (HLS) | ✅ |
+| **Tabii** | tabii.com | Dizi, Film, Belgesel | Resmî DASH + HLS | ✅ |
+| **TRT Belgesel** | trtbelgesel.com.tr | Belgesel, Dizi, Canlı | Resmî YouTube + HLS | ✅ |
 | **AnimeciX** | animecix.tv | Anime | TauVideo | ✅ |
+| **Animeler** | animeler.live | Anime | Kendi oynatıcısı (HLS) | ✅ |
 | **RareFilmm** | rarefilmm.com | Film (eski/nadir) | ok.ru | ✅ |
 | **BelgeselX** | belgeselx.com | Belgesel | Odnoklassniki (ok.ru) | ✅ |
 | **CanliTV** | Türkiye IPTV listesi | Canlı TV | m3u8 | ✅ |
@@ -80,6 +101,42 @@ Durum sütunu, [test aracıyla](#-test-aracı) 26 Ekim 2026'da yapılan uçtan u
 > **TvDiziler:** Oynatıcı yapılandırması geçersiz JavaScript içerebildiği için (`safarihlsjs: isTVDevice ? true : undefined`) JSON yerine alanlar regex ile okunuyor. `video.twimg.com` adresleri `Referer` başlığıyla 403 verdiğinden bu kaynaklarda referer boş bırakılıyor.
 >
 > **DDizi:** `ddizi.im` adresi `ddizi.tel`e yönlendiği ve POST aramasında form verisi kaybolduğu için `mainUrl` doğrudan `ddizi.tel`. Twitter CDN kaynaklarında referer gönderilmiyor.
+>
+> **AtvDizi:** ATV'nin resmî sitesindeki ücretsiz dizi bölümleri. Bölüm sayfalarındaki JSON-LD `VideoObject` kaydından doğrudan MP4 adresi alınıyor; fragmanlar atlanıyor.
+>
+> **DiziBal / DiziBol:** Aynı Tailwind tabanlı platformun iki ayrı alan adı. Katalog `/series`, `/movie` ve `/episode` yollarından, oynatma ise Pilavyer HLS akışından okunuyor.
+>
+> **DiziRella:** Bölüm sayfasındaki `ksdpictures.site/dzembed.php` oynatıcısından `SOURCE` m3u8 adresi ve Türkçe altyazı izleri alınıyor.
+>
+> **SetFilmIzle:** Site `setfilmizle.ltd` adresine taşındı; film ve diziler SetPlay HLS kaynağından oynatılıyor.
+>
+> **KoreanTurk / WebDramaTurkey:** Kore ve Asya dizileri; bölüm sayfalarındaki gömülü oynatıcıdan HLS adresi çözülüyor. WebDramaTurkey'de `dtpasn.asia` kaynakları kullanılıyor.
+>
+> **Tabii:** TRT'nin resmî dijital platformu. Katalog ve bölüm listeleri `__NEXT_DATA__` üzerinden okunuyor; akışlar DASH/HLS olarak veriliyor. Bazı yapımlar Widevine DRM korumalıdır ve oynatma desteği uygulamanın Widevine desteğine bağlıdır.
+>
+> **TRT Belgesel:** Resmî sitedeki programlar ve bölümler; bölüm videoları TRT Belgesel'in resmî YouTube kanalından, canlı yayın ise TRT'nin resmî HLS akışından alınıyor. Video indirilmiyor veya yeniden yayınlanmıyor.
+>
+> **HDFilmDelisi:** Next.js/RSC tabanlı film sitesi; detay ve embed adresleri RSC çıktısından, oynatma ise doğrudan MP4 kaynağından alınıyor.
+>
+> **DiziRoll:** Yabancı dizi arşivi; site içi arama uç noktası yetkisiz yanıt verdiği için arama katalog süzgeciyle yapılıyor.
+>
+> **SezonlukFilm:** Film arşivi; `videoseyred.in` oynatıcısının JSON listesinden HLS adresi çözülüyor, medya isteğine `Accept: */*` ekleniyor.
+>
+> **Dizigecesi:** Bölüm sayfasındaki `data-embed` kimlikleri `/ajax/embed` üzerinden çözülüyor; VidMoly ve P2P kaynakları destekleniyor.
+>
+> **Animeler:** Next.js tabanlı anime sitesi; katalog `article.mac`, arama `/api/search`, oynatma `window.__PLAYER_BOOT__` master adresinden okunuyor.
+>
+> **ShowTV:** Bölüm listesi `/sitemap_<dizi>.xml` dosyasından; oynatma bölüm sayfasındaki oynatıcı JSON'undan (m3u8/mp4) alınıyor.
+>
+> **KanalD:** Arama `/actions/search` JSON uç noktasından; bölümler `/<dizi>/bolumler` sayfalarından, oynatma JSON-LD `contentUrl` alanından okunuyor.
+>
+> **TV8:** Katalog `/programlar` sayfasından; bölümler program sayfasındaki `Tüm Bölümler` sekmesinden, oynatma bölüm sayfasındaki imzalı `videocdn.tv8.com.tr` HLS akışından (yoksa JSON-LD `contentURL` MP4'ünden) alınıyor. Site araması Google CSE kullandığı için arama katalog üzerinden süzülüyor.
+>
+> **NowTV:** NOW'un resmî sitesi. Dizi ve program bölümleri `/ajax/videos`, oynatma ise `/ajax/stream` uç noktasından alınıyor; arama `POST /arama` ile yapılıyor. Film sayfaları yalnızca fragman (Dailymotion) sunduğu için kapsam dışı bırakıldı.
+>
+> **Izle7:** Kanal 7'nin VOD portalı. Diziler `/kanal7/diziler` kategorilerinden, filmler `/kanal7/filmler` sayfasından okunuyor; kategori bölümleri `?page=N` ile sayfalanıyor. Oynatma, bölüm sayfasındaki `embed-<id>` adresinden alınan Dailymotion HLS akışıyla yapılıyor; akış isteğine `Origin`, `Referer`, `Accept` ve eşleşen `dmTs`/`dmV1st` çerezleri ekleniyor.
+>
+> **TV2:** Eski teve2 sitesi. Dizi, film ve program kategorileri `/diziler`, `/filmler` ve `/programlar` altından; bölümler `.../bolumler?page=N` sayfalarından okunuyor. Oynatma, bölüm sayfasındaki JSON-LD `contentUrl` alanından veya Kanal D embed sayfasından alınan HLS akışıyla yapılıyor; sitedeki `tvS1` yazım hatası `/S1/` yoluna düzeltiliyor.
 >
 > FilmMakinesi ve HDFilmCehennemi, oynatıcıların karıştırılmış (obfuscate) video adresini çözmek için CloudStream uygulamasıyla gelen Rhino JavaScript motorunu kullanır (`OynaticiCozucu.kt`).
 >
@@ -162,11 +219,15 @@ Bu depo yalnızca sitelerin herkese açık sayfalarını okuyan eklentiler içer
 - Yeni eklentiler: FilmDozu, YabanciDizi (MolyStream çözücüsü dahil).
 - Yeni eklentiler: BelgeselX, AsyaWatch, KultFilmler ve DiziGom. DiziGom yeni Laravel/Tailwind sitesine göre baştan yazıldı; KultFilmler'e VidPapi, BelgeselX'e ok.ru desteği eklendi.
 - Yeni eklentiler: StarTV, DiziMom, SezonlukDizi, TvDiziler, DDizi ve DramaDizilerim. DiziMom ile SezonlukDizi yeniden yazılarak geri eklendi; SezonlukDizi için Byse (Filemoon) AES-GCM çözücüsü, DiziMom için HDPlayerSystem desteği yazıldı.
+- Yeni eklentiler: AtvDizi, DiziBal, DiziBol, DiziRella, SelcukFlix, KoreanTurk, SetFilmIzle, WebDramaTurkey, Tabii ve TRT Belgesel. KoreanTurk ve SetFilmIzle güncel alan adlarıyla geri eklendi. CizgiMax, DiziBox, DiziKorea, HDFilmIzle ve Anizm tarama veya oynatma adımlarını geçemediği için eklenmedi.
+- Yeni eklentiler: HDFilmDelisi, DiziRoll, SezonlukFilm, Dizigecesi, Animeler, ShowTV, KanalD ve TV8. ShowTV bölüm listesini sitemap üzerinden, KanalD aramayı `/actions/search` uç noktası üzerinden okuyor; DiziRoll ve TV8 araması katalog süzgeciyle çalışıyor. DiziIzle yalnızca YouTube kaynağı sunduğu için eklenmedi.
+- Yeni eklentiler: NowTV ve Izle7. NowTV dizi/program bölümlerini `/ajax/videos` ve `/ajax/stream` üzerinden, Izle7 ise Kanal 7 kategorilerini ve Dailymotion HLS akışlarını okuyor. NowTV filmleri yalnızca fragman olarak yayınlandığı için kapsam dışı bırakıldı.
+- Yeni eklenti: TV2. Dizi, film ve program arşivi; bölümler `/bolumler?page=N`, oynatma ise JSON-LD `contentUrl` veya Kanal D embed sayfasındaki `duhnet.tv` HLS akışı üzerinden okunuyor.
 - FilmKovasi, FullHDFilmIzlede ve WFilmIzle denendi; detay sayfaları/oynatıcıları güvenilir çalışmadığı için eklenmedi.
 - Dizipod, Dizilla, DiziPal, FilmModu ve JetFilmizle; Dizilla Next.js/JSON-LD ve Pichive oynatıcısına, JetFilmizle yeni videopark HLS akışına, DiziPal/Dizipod güncel oynatıcı adreslerine göre yenilendi.
 - FilmMakinesi büyük ölçüde yeniden yazıldı; FullHDFilmizlesene, HDFilmCehennemi, DiziYou, WebteIzle, AnimeciX, YouTube ve CanliTV güncel sitelere uyarlandı.
 - ok.ru çözücüsü yeni sayfa kodlamasına uyarlandı, tek tırnaklı yeni sayfayı okuyan VidMoly çözücüsü eklendi, karıştırılmış oynatıcılar için `OynaticiCozucu` (Rhino) eklendi.
-- Kapanan, park edilen, bot/CAPTCHA korumasına geçen ya da baştan yazılması gereken siteler çıkarıldı (CizgiMax, DiziBox, DiziKorea, FullHDFilm, GolgeTV, InatBox, IzleAI, KoreanTurk, NetflixMirror, RecTV, SetFilmIzle, SinemaCX, SineWix, SuperFilmGeldi, TurkAnime, UgurFilm, Watch2Movies) ve yetişkin içerik eklentileri hiç alınmadı.
+- Kapanan, park edilen, bot/CAPTCHA korumasına geçen ya da baştan yazılması gereken siteler çıkarıldı (CizgiMax, DiziBox, DiziKorea, FullHDFilm, GolgeTV, InatBox, IzleAI, NetflixMirror, RecTV, SinemaCX, SineWix, SuperFilmGeldi, TurkAnime, UgurFilm, Watch2Movies, HDFilmIzle, Anizm) ve yetişkin içerik eklentileri hiç alınmadı.
 - CI: derleme sonuçlarını `builds` dalına yükleme açıldı; alan adı kontrolü GitHub sunucusunda ve ek paket gerektirmeden çalışıyor.
 
 Tam liste için `git log`.
