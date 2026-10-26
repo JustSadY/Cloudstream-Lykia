@@ -55,7 +55,7 @@ Durum sütunu, [test aracıyla](#-test-aracı) 26 Ekim 2026'da yapılan uçtan u
 | **DiziMom** | dizidad.com | Dizi | HDPlayerSystem (HLS) | ✅ |
 | **SezonlukDizi** | sezonlukdizi.cc | Dizi | Byse/Filemoon (HLS) | ✅ |
 | **SezonlukFilm** | sezonlukdizi.one | Film | VideoSeyred (HLS) | ✅ |
-| **TvDiziler** | tvdiziler.cc | Dizi | Kendi oynatıcısı (HLS) | ✅ |
+| **TvDiziler** | tvdiziler.tv | Dizi | Kendi oynatıcısı (MP4) | ✅ |
 | **DDizi** | ddizi.tel | Dizi | Kendi oynatıcısı (HLS) | ✅ |
 | **AtvDizi** | atv.com.tr | Dizi | Kendi oynatıcısı (MP4) | ✅ |
 | **DiziBal** | dizibal.org | Dizi, Film, Anime | Pilavyer (HLS) | ✅ |
@@ -98,7 +98,7 @@ Durum sütunu, [test aracıyla](#-test-aracı) 26 Ekim 2026'da yapılan uçtan u
 >
 > **SezonlukDizi:** Alternatiflerin çoğu reCAPTCHA kapısı döndürüyor; çalışan Filemoon/Byse kaynağı kullanılıyor. Byse'nin `/api/videos/<kod>` yanıtındaki AES-256-GCM şifreli `playback` paketi, `key_parts` içinden sürüm numarasına göre seçilen parçalarla çözülüp HLS adresi alınıyor.
 >
-> **TvDiziler:** Oynatıcı yapılandırması geçersiz JavaScript içerebildiği için (`safarihlsjs: isTVDevice ? true : undefined`) JSON yerine alanlar regex ile okunuyor. `video.twimg.com` adresleri `Referer` başlığıyla 403 verdiğinden bu kaynaklarda referer boş bırakılıyor.
+> **TvDiziler:** Oynatıcı yapılandırması geçersiz JavaScript içerebildiği için (`safarihlsjs: isTVDevice ? true : undefined`) JSON yerine alanlar regex ile okunuyor. `video.twimg.com` adresleri `Referer` başlığıyla 403 verdiğinden bu kaynaklarda referer boş bırakılıyor. Site `tvdiziler.tv` alan adına taşındı; kaçışlı (`\/`) video adresleri çözülüyor.
 >
 > **DDizi:** `ddizi.im` adresi `ddizi.tel`e yönlendiği ve POST aramasında form verisi kaybolduğu için `mainUrl` doğrudan `ddizi.tel`. Twitter CDN kaynaklarında referer gönderilmiyor.
 >
@@ -223,6 +223,7 @@ Bu depo yalnızca sitelerin herkese açık sayfalarını okuyan eklentiler içer
 - Yeni eklentiler: HDFilmDelisi, DiziRoll, SezonlukFilm, Dizigecesi, Animeler, ShowTV, KanalD ve TV8. ShowTV bölüm listesini sitemap üzerinden, KanalD aramayı `/actions/search` uç noktası üzerinden okuyor; DiziRoll ve TV8 araması katalog süzgeciyle çalışıyor. DiziIzle yalnızca YouTube kaynağı sunduğu için eklenmedi.
 - Yeni eklentiler: NowTV ve Izle7. NowTV dizi/program bölümlerini `/ajax/videos` ve `/ajax/stream` üzerinden, Izle7 ise Kanal 7 kategorilerini ve Dailymotion HLS akışlarını okuyor. NowTV filmleri yalnızca fragman olarak yayınlandığı için kapsam dışı bırakıldı.
 - Yeni eklenti: TV2. Dizi, film ve program arşivi; bölümler `/bolumler?page=N`, oynatma ise JSON-LD `contentUrl` veya Kanal D embed sayfasındaki `duhnet.tv` HLS akışı üzerinden okunuyor.
+- DDizi, DiziGom, JetFilmizle ve TvDiziler oynatma hataları giderildi. DDizi kaçışlı video adreslerini çözüyor; DiziGom güncel `pilavyerplay` alan adını kullanıyor; JetFilmizle ölü kaynakları atlayıp tek tırnaklı VidMoly akışını doğrudan okuyor; TvDiziler `tvdiziler.tv` alan adına taşındı.
 - FilmKovasi, FullHDFilmIzlede ve WFilmIzle denendi; detay sayfaları/oynatıcıları güvenilir çalışmadığı için eklenmedi.
 - Dizipod, Dizilla, DiziPal, FilmModu ve JetFilmizle; Dizilla Next.js/JSON-LD ve Pichive oynatıcısına, JetFilmizle yeni videopark HLS akışına, DiziPal/Dizipod güncel oynatıcı adreslerine göre yenilendi.
 - FilmMakinesi büyük ölçüde yeniden yazıldı; FullHDFilmizlesene, HDFilmCehennemi, DiziYou, WebteIzle, AnimeciX, YouTube ve CanliTV güncel sitelere uyarlandı.

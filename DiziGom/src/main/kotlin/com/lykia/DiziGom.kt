@@ -193,9 +193,14 @@ class DiziGom : MainAPI() {
             return loadExtractor(fixUrl(iframe), "${mainUrl}/", subtitleCallback, callback)
         }
 
-        val playerUrl = "https://pilavyerplay.top/assets/js/s.php?s=$slug"
+        val playerHost = document.select("script[src]").firstOrNull {
+            it.attr("src").contains("pilavyerplay")
+        }?.attr("src")?.let { scriptUrl ->
+            Regex("""^(https?://[^/]+)""").find(fixUrl(scriptUrl))?.groupValues?.get(1)
+        } ?: "https://play2.pilavyerplay.top"
+        val playerUrl = "$playerHost/assets/js/s.php?s=$slug"
         val playerPage = app.get(playerUrl, referer = data).text
-        val rawStream = Regex("""https://pilavyerplay\.top/api/stream\.php\?[^"']+""")
+        val rawStream = Regex("""https://(?:[\w.-]+\.)?pilavyerplay\.top/api/stream\.php\?[^"']+""")
             .find(playerPage)?.value ?: return false
         val stream = rawStream
             .replace("\\u0026", "&")

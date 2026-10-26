@@ -159,23 +159,27 @@ class JetFilmizle : MainAPI() {
             val playerType = button.attr("data-player-type").ifBlank { "dublaj" }
             val sourceIdx  = button.attr("data-source-index")
 
-            val playerCode = app.post(
-                "${mainUrl}/jetplayer",
-                referer = data,
-                data    = mapOf(
-                    "film_id"      to filmId,
-                    "source_index" to sourceIdx,
-                    "player_type"  to playerType
-                ),
-                headers = mapOf("X-Requested-With" to "XMLHttpRequest")
-            ).text
+            val playerCode = runCatching {
+                app.post(
+                    "${mainUrl}/jetplayer",
+                    referer = data,
+                    data    = mapOf(
+                        "film_id"      to filmId,
+                        "source_index" to sourceIdx,
+                        "player_type"  to playerType
+                    ),
+                    headers = mapOf("X-Requested-With" to "XMLHttpRequest")
+                ).text
+            }.getOrNull() ?: continue
 
             val embed = Regex("""iframe[^>]*\ssrc=['"]([^'"]+)['"]""").find(playerCode)?.groupValues?.get(1)?.trim()
                 ?: continue
             if (!seen.add(embed)) continue
             if (embed.contains("fragman", true)) continue
 
-            emitted += resolveEmbed(embed, data, subtitleCallback) { link -> callback(link) }
+            emitted += runCatching {
+                resolveEmbed(embed, data, subtitleCallback) { link -> callback(link) }
+            }.getOrDefault(0)
             if (emitted > 0) break
         }
 
@@ -218,9 +222,29 @@ class JetFilmizle : MainAPI() {
         }
 
         var emitted = 0
-        loadExtractor(embed, referer, subtitleCallback) { link ->
-            emitted++
-            callback(link)
+        runCatching {
+            loadExtractor(embed, referer, subtitleCallback) { link ->
+                emitted++
+                callback(link)
+            }
+        }
+        if (emitted == 0) {
+            val page = runCatching { app.get(embed, referer = referer, interceptor = interceptor).text }.getOrNull()
+            if (page != null) {
+                val direct = Regex("""(?:file|src)\s*[:=]\s*['"](https?://[^'"]+\.m3u8[^'"]*)['"]""")
+                    .find(page)?.groupValues?.get(1)
+                    ?.replace("\\/", "/")
+                    ?: Regex("""https?://[^"'\s\\]+\.m3u8[^"'\s\\]*""")
+                        .find(page)?.value
+                        ?.replace("\\/", "/")
+                if (!direct.isNullOrBlank()) {
+                    callback(newExtractorLink(source = "JetFilmizle", name = "HLS", url = direct, type = ExtractorLinkType.M3U8) {
+                        this.referer = embed
+                        this.quality = Qualities.Unknown.value
+                    })
+                    emitted++
+                }
+            }
         }
         return emitted
     }

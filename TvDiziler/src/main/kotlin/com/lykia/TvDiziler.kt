@@ -14,7 +14,7 @@ import com.lagradost.cloudstream3.extractors.JWPlayer
 import org.jsoup.Jsoup
 
 class TvDiziler : MainAPI() {
-    override var mainUrl              = "https://tvdiziler.cc/home"
+    override var mainUrl              = "https://tvdiziler.tv"
     override var name                 = "TvDiziler"
     override val hasMainPage          = true
     override var lang                 = "tr"
@@ -24,7 +24,7 @@ class TvDiziler : MainAPI() {
     override val supportedTypes       = setOf(TvType.TvSeries)
 
     override val mainPage = mainPageOf(
-        mainUrl                         to "Son Bölümler",
+        "${mainUrl}/home"               to "Son Bölümler",
         "${mainUrl}/dizi/tur/aile"      to "Aile",
         "${mainUrl}/dizi/tur/aksiyon"      to "Aksiyon",
         "${mainUrl}/dizi/tur/aksiyon-macera"      to "Aksiyon-Macera",
@@ -150,7 +150,6 @@ class TvDiziler : MainAPI() {
 
     override suspend fun load(url: String): LoadResponse? {
         Log.d("TVD", "Load -> url")
-        println("Load -> url")
         if (!url.contains("/dizi/")) {
             val mainReq = app.get(url, referer = mainUrl)
             val document = mainReq.document
@@ -284,7 +283,8 @@ class TvDiziler : MainAPI() {
             ).document
             val script = ifDoc.select("script").find { it.data().contains("sources:") }?.data() ?: ""
             val videoData = script.substringAfter("sources:", "").substringBefore("],")
-            val file = Regex("""file\s*:\s*["']([^"']+)["']""").find(videoData)?.groupValues?.get(1) ?: return false
+            val file = Regex("""file\s*:\s*["']([^"']+)["']""").find(videoData)?.groupValues?.get(1)
+                ?.replace("\\/", "/") ?: return false
             val type = Regex("""type\s*:\s*["']([^"']+)["']""").find(videoData)?.groupValues?.get(1) ?: ""
             val label = Regex("""label\s*:\s*["']([^"']+)["']""").find(videoData)?.groupValues?.get(1) ?: ""
 
@@ -320,5 +320,5 @@ class TvDiziler : MainAPI() {
 
 class TvDizilerOynat : JWPlayer() {
     override val name = "TvDizilerOynat"
-    override val mainUrl = "https://tvdiziler.cc/home/player/oynat/"
+    override val mainUrl = "https://tvdiziler.tv/vid/ply/"
 }

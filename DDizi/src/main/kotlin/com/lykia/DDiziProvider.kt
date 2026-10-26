@@ -339,13 +339,12 @@ class DDiziProvider : MainAPI() {
                             val fileMatch = fileRegex.find(sourcesMatch.groupValues[1])
                             
                             if (fileMatch != null) {
-                                val fileUrl = fileMatch.groupValues[1]
+                                val fileUrl = fileMatch.groupValues[1].replace("\\/", "/")
                                 Log.d("DDizi:", "Found video source: $fileUrl")
                                 
                                 val fileType = when {
-                                    fileUrl.contains(".m3u8") || fileUrl.contains("hls") -> "hls"
-                                    fileUrl.contains(".mp4") -> "mp4"
-                                    else -> "hls" 
+                                    fileUrl.contains(".m3u8") || fileUrl.contains("hls") || fileUrl.contains("master.txt") -> "hls"
+                                    else -> "mp4"
                                 }
                                 
                                 val qualityRegex = Regex("""label:\s*["'](.*?)["']""")
@@ -424,16 +423,16 @@ class DDiziProvider : MainAPI() {
                                                     }
                                                     
                                                     callback.invoke(
-                                    ExtractorLink(
-                                        source = name,
-                                        name = "$name - $quality",
-                                        url = fileUrl,
-                                        referer = linkReferer,
-                                        quality = getQualityFromName(quality),
-                                        headers = linkHeaders,
-                                        type = if (fileType == "hls") ExtractorLinkType.M3U8 else ExtractorLinkType.VIDEO
-                                    )
-                                )
+                                                        ExtractorLink(
+                                                            source = name,
+                                                            name = "$name - $m3u8Quality",
+                                                            url = m3u8Url,
+                                                            referer = linkReferer,
+                                                            quality = getQualityFromName(m3u8Quality),
+                                                            headers = linkHeaders,
+                                                            type = ExtractorLinkType.M3U8
+                                                        )
+                                                    )
                                                 }
                                             } catch (e2: Exception) {
                                                 Log.d("DDizi:", "Error parsing master.txt: ${e2.message}")
