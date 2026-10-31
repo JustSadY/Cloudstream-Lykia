@@ -24,7 +24,7 @@ _[CloudStream](https://github.com/recloudstream/cloudstream) (Android) için Tü
 
 ## 📱 Eklentiler
 
-Durum sütunu, [test aracıyla](#-test-aracı) 26 Ekim 2026'da yapılan uçtan uca denemeyi gösterir: ana sayfa → arama → detay → kaynak bağlantıları → bağlantıya gerçek HTTP isteği.
+Durum sütunu, [test aracıyla](#-test-aracı) 26-31 Ekim 2026'da yapılan uçtan uca denemeyi gösterir: ana sayfa → arama → detay → kaynak bağlantıları → bağlantıya gerçek HTTP isteği.
 
 | Eklenti | Site | Tür | Kaynaklar | Durum |
 |---|---|---|---|---|
@@ -52,6 +52,24 @@ Durum sütunu, [test aracıyla](#-test-aracı) 26 Ekim 2026'da yapılan uçtan u
 | **NowTV** | nowtv.com.tr | Dizi, Program | Kendi oynatıcısı (HLS) | ✅ |
 | **Izle7** | izle7.com | Dizi, Film | Dailymotion (HLS) | ✅ |
 | **TV2** | tv2.com.tr | Dizi, Film, Program | Kendi oynatıcısı (HLS) | ✅ |
+| **TV100** | tv100.com | Haber, Video | JSON-LD `VideoObject` (MP4) | ✅ |
+| **Beyaz TV** | beyaztv.com.tr | Program | Dailymotion (HLS) | ✅ |
+| **HaberTürk** | haberturk.com | Haber, Spor, Video | JSON-LD `VideoObject` (MP4/HLS) | ✅ |
+| **CNN Türk** | cnnturk.com | Haber, Spor, Video | `cnnvod.duhnet.tv` (HLS) | ✅ |
+| **Haber Global** | haberglobal.com | Haber, Video | Dailymotion (HLS) | ✅ |
+| **Bloomberg HT** | bloomberght.com | Haber, Ekonomi, Program | `hope-video` (MP4) | ✅ |
+| **Tele1** | tele1.com.tr | Haber, Video | Dailymotion (HLS) | ✅ |
+| **TRT Canlı** | trt.com.tr | Canlı TV | Resmî TRT HLS | ✅ |
+| **KRT TV** | krttv.com.tr | Haber, Video | `bilgin.io` (MP4) | ✅ |
+| **Ülke TV** | ulketv.com | Haber, Video | `tevideo.org` (MP4) | ✅ |
+| **TGRT Haber** | tgrthaber.com | Haber, Video | `v.tgrthaber.com` (MP4) | ✅ |
+| **TVNET** | tvnet.com.tr | Canlı TV | Resmî TVNET HLS | ✅ |
+| **Kanal 7 Canlı** | kanal7.com | Canlı TV | Resmî Kanal 7 HLS | ✅ |
+| **Yirmidört TV** | yirmidort.tv | Haber, Video | `yirmidorthaber.com` (MP4) | ✅ |
+| **İnternet Haber** | internethaber.com | Haber, Video | `v.internethaber.com` (MP4) | ✅ |
+| **Milliyet TV** | milliyet.com.tr | Haber, Video | Dailymotion (HLS) | ✅ |
+| **Cumhuriyet TV** | cumhuriyet.com.tr | Haber, Video | Dailymotion (HLS) | ✅ |
+| **Hürriyet TV** | hurriyet.com.tr | Haber, Spor, Video | Dailymotion (HLS) | ✅ |
 | **DiziMom** | dizidad.com | Dizi | HDPlayerSystem (HLS) | ✅ |
 | **SezonlukDizi** | sezonlukdizi.cc | Dizi | Byse/Filemoon (HLS) | ✅ |
 | **SezonlukFilm** | sezonlukdizi.one | Film | VideoSeyred (HLS) | ✅ |
@@ -138,6 +156,42 @@ Durum sütunu, [test aracıyla](#-test-aracı) 26 Ekim 2026'da yapılan uçtan u
 >
 > **TV2:** Eski teve2 sitesi. Dizi, film ve program kategorileri `/diziler`, `/filmler` ve `/programlar` altından; bölümler `.../bolumler?page=N` sayfalarından okunuyor. Oynatma, bölüm sayfasındaki JSON-LD `contentUrl` alanından veya Kanal D embed sayfasından alınan HLS akışıyla yapılıyor; sitedeki `tvS1` yazım hatası `/S1/` yoluna düzeltiliyor.
 >
+> **TV100:** Resmî kanalın video galerisi. Ana sayfa `/video-galeri?sayfa=N`, arama `/ara?key=...` üzerinden okunuyor; foto galerileri eleniyor. Oynatma, sayfadaki JSON-LD `VideoObject.contentUrl` MP4 adresinden alınıyor.
+>
+> **Beyaz TV:** Program arşivi `/program` kartlarından, bölümler `/program/<program>/<bölüm>` sayfalarından okunuyor; arama program adları üzerinden yerel olarak yapılıyor. Oynatma, sayfadaki `video: "<id>"` Dailymotion kimliğinin metadata API'sinden çözülen HLS akışıyla yapılıyor; akış isteğine `Origin`, `Referer`, `Accept` ve `dmTs`/`dmV1st` çerezleri ekleniyor.
+>
+> **HaberTürk:** Video kategorileri `/video`, `/video/haber`, `/video/spor`, `/video/ekonomi` ve `/video/magazin` sayfalarından okunuyor; arama bu listeler yerel olarak süzülerek yapılıyor. Oynatma, sayfadaki JSON-LD `VideoObject.contentUrl` adresinden (MP4 veya HLS) alınıyor.
+>
+> **CNN Türk:** Video galerisi `/videolar/` sayfasından okunuyor; arama video listesi yerel olarak süzülerek yapılıyor. Oynatma, sayfadaki `cnnvod.duhnet.tv` m3u8 adresinden alınıyor; HTTP verilen adresler HTTPS'e çevriliyor.
+>
+> **Haber Global:** Video galerisi `/video-galeri` ve `/video-galeri/<sayfa>` sayfalarından okunuyor; arama `/arama?key=...` sonuçlarından yalnızca `VideoObject` içeren sayfalar süzülerek alınıyor. Oynatma, sayfadaki Dailymotion kimliğinin metadata API'sinden çözülen HLS akışıyla yapılıyor; akış isteğine `Origin`, `Referer`, `Accept` ve `dmTs`/`dmV1st` çerezleri ekleniyor.
+>
+> **Bloomberg HT:** `/video` sayfasındaki son videolar ve `/arama?q=...` sonuçları okunuyor. Oynatma, video sayfasındaki JSON-LD `VideoObject.embedUrl` üzerinden açılan `/video/embed/<id>` sayfasındaki `data-hope-video` JSON'undan en yüksek çözünürlüklü MP4 olarak alınıyor.
+>
+> **Tele1:** `/video` sayfasındaki haber videoları okunuyor; arama bu liste üzerinden yerel olarak yapılıyor. Oynatma, sayfadaki `data-video` Dailymotion kimliğinin metadata API'sinden çözülen HLS akışıyla yapılıyor; YouTube'a gömülü videolar kapsam dışı bırakılıyor.
+>
+> **TRT Canlı:** TRT 1, TRT 2, TRT Haber, TRT Spor, TRT Spor Yıldız, TRT Belgesel, TRT Çocuk, TRT Müzik, TRT Avaz, TRT Kurdî, TRT Arabi ve TRT World'ün resmî `medya.trt.com.tr` HLS akışları tek listede sunuluyor. Kanal listesi statiktir; arama kanal adına göre yapılır.
+>
+> **KRT TV:** `/video` ve `/video?sayfa=N` galerisi okunuyor; arama `/arama?key=...` sonuçlarındaki adayların detay sayfaları taranarak yalnızca video içerenler alınıyor. Site araması boş dönerse video galerisinde yerel arama yapılıyor. Oynatma, haber sayfasındaki `krttv-v.bilgin.io` MP4 adresinden.
+>
+> **Ülke TV:** `/video` galerisindeki haber videoları okunuyor; site araması bulunmadığı için arama video galerisi üzerinden yerel olarak yapılıyor. Oynatma, video sayfasındaki JSON-LD `VideoObject` kaydından veya `vidyome` embed sayfasından alınan `tevideo.org` MP4 adresiyle yapılıyor.
+>
+> **TGRT Haber:** Gündem, dünya, ekonomi, spor ve magazin video kategorileri okunuyor; arama bu kategorilerde yerel olarak yapılıyor. Oynatma, haber sayfasındaki `v.tgrthaber.com` MP4 adresinden.
+>
+> **TVNET:** TVNET'in resmî `mncdn.com` HLS canlı yayın akışı tek kanal olarak sunuluyor. Kanal listesi statiktir.
+>
+> **Kanal 7 Canlı:** Kanal 7 ve Kanal 7 Avrupa'nın resmî HLS canlı yayınları tek listede sunuluyor. Kanal listesi statiktir; arama kanal adına göre yapılır.
+>
+> **Yirmidört TV:** `/video` galerisi ve `/arama-sonuclari?q=...` araması okunuyor; oynatma, video sayfasındaki `beethoven-cdn.yirmidorthaber.com` MP4 adresinden.
+>
+> **İnternet Haber:** `/video-galeri?page=N` galerisi ve `/arama?key=...` araması okunuyor; oynatma, video sayfasındaki JSON-LD `VideoObject` kaydından alınan `v.internethaber.com` MP4 adresinden.
+>
+> **Milliyet TV:** `/video` galerisindeki haber videoları okunuyor; site araması statik sonuç vermediği için arama galeri üzerinden yerel olarak yapılıyor. Oynatma, video sayfasındaki `dailymotion_player_<id>` kimliğinin metadata API'sinden çözülen HLS akışıyla yapılıyor; akış isteğine `Origin`, `Referer`, `Accept` ve `dmTs`/`dmV1st` çerezleri ekleniyor.
+>
+> **Cumhuriyet TV:** `/video` galerisindeki haber videoları okunuyor; site araması statik sonuç vermediği için arama galeri üzerinden yerel olarak yapılıyor. Oynatma, video sayfasındaki JSON-LD `VideoObject.contentUrl` Dailymotion kimliğinin metadata API'sinden çözülen HLS akışıyla yapılıyor; akış isteğine `Origin`, `Referer`, `Accept` ve `dmTs`/`dmV1st` çerezleri ekleniyor.
+>
+> **Hürriyet TV:** `/video` ve `/sporarena/video-galeri/` kategorilerindeki videolar okunuyor; arama bu iki liste üzerinden yerel olarak yapılıyor. Oynatma, video sayfasındaki `data-videoid` Dailymotion kimliğinin metadata API'sinden çözülen HLS akışıyla yapılıyor; akış isteğine `Origin`, `Referer`, `Accept` ve `dmTs`/`dmV1st` çerezleri ekleniyor.
+>
 > FilmMakinesi ve HDFilmCehennemi, oynatıcıların karıştırılmış (obfuscate) video adresini çözmek için CloudStream uygulamasıyla gelen Rhino JavaScript motorunu kullanır (`OynaticiCozucu.kt`).
 >
 > Yetişkin içerik eklentisi yoktur.
@@ -223,6 +277,23 @@ Bu depo yalnızca sitelerin herkese açık sayfalarını okuyan eklentiler içer
 - Yeni eklentiler: HDFilmDelisi, DiziRoll, SezonlukFilm, Dizigecesi, Animeler, ShowTV, KanalD ve TV8. ShowTV bölüm listesini sitemap üzerinden, KanalD aramayı `/actions/search` uç noktası üzerinden okuyor; DiziRoll ve TV8 araması katalog süzgeciyle çalışıyor. DiziIzle yalnızca YouTube kaynağı sunduğu için eklenmedi.
 - Yeni eklentiler: NowTV ve Izle7. NowTV dizi/program bölümlerini `/ajax/videos` ve `/ajax/stream` üzerinden, Izle7 ise Kanal 7 kategorilerini ve Dailymotion HLS akışlarını okuyor. NowTV filmleri yalnızca fragman olarak yayınlandığı için kapsam dışı bırakıldı.
 - Yeni eklenti: TV2. Dizi, film ve program arşivi; bölümler `/bolumler?page=N`, oynatma ise JSON-LD `contentUrl` veya Kanal D embed sayfasındaki `duhnet.tv` HLS akışı üzerinden okunuyor.
+- Yeni eklentiler: TV100 ve Beyaz TV. TV100 video galerisini JSON-LD `VideoObject` MP4 adresleriyle, Beyaz TV ise program arşivini Dailymotion HLS akışlarıyla okuyor. Her iki eklenti de test aracında ana sayfa, arama, detay, kaynak ve oynatma adımlarını geçti.
+- Yeni eklenti: HaberTürk. Video kategorileri ve JSON-LD `VideoObject` akışları okunuyor; arama video listeleri üzerinden yerel olarak yapılıyor. Test aracında tüm adımlar geçti.
+- Yeni eklenti: CNN Türk. `/videolar/` galerisi ve `cnnvod.duhnet.tv` HLS akışları okunuyor; arama video listesi üzerinden yerel. Test aracında tüm adımlar geçti.
+- Yeni eklenti: Haber Global. `/video-galeri` sayfaları ve JSON-LD `VideoObject` içindeki Dailymotion kimlikleri okunuyor; arama sonuçları video içeren sayfalara süzülüyor. Test aracında tüm adımlar geçti.
+- Yeni eklentiler: Bloomberg HT ve Tele1. Bloomberg HT videoları `data-hope-video` JSON'undaki MP4 adreslerinden, Tele1 ise `data-video` Dailymotion kimliklerinden çözülüyor. İki eklenti de test aracında tüm adımları geçti.
+- Yeni eklenti: TRT Canlı. TRT'nin 12 resmî kanalı `medya.trt.com.tr` HLS akışlarıyla tek listede sunuluyor. Test aracında tüm adımlar geçti.
+- Yeni eklenti: KRT TV. `/video` galerisi ve `/arama?key=...` sonuçları okunuyor; video içeren sayfalar JSON-LD `VideoObject` ile süzülüyor, oynatma `bilgin.io` MP4 adresinden yapılıyor. Test aracında tüm adımlar geçti.
+- Yeni eklenti: Ülke TV. `/video` galerisi okunuyor; arama galeri üzerinden yerel. Oynatma, video sayfasındaki JSON-LD `VideoObject` kaydından alınan `tevideo.org` MP4 adresinden yapılıyor. Test aracında tüm adımlar geçti.
+- Yeni eklenti: TGRT Haber. Gündem, dünya, ekonomi, spor ve magazin video kategorileri okunuyor; arama kategorilerde yerel. Oynatma, `v.tgrthaber.com` MP4 adresinden. Test aracında tüm adımlar geçti.
+- Yeni eklenti: TVNET. Resmî `mncdn.com` HLS canlı yayın akışı tek kanal olarak sunuluyor. Test aracında tüm adımlar geçti.
+- Yeni eklenti: Kanal 7 Canlı. Kanal 7 ve Kanal 7 Avrupa'nın resmî HLS canlı yayınları tek listede sunuluyor. Test aracında tüm adımlar geçti.
+- Yeni eklenti: Yirmidört TV. `/video` galerisi ve `/arama-sonuclari?q=...` araması okunuyor; oynatma `yirmidorthaber.com` MP4 adresinden. Test aracında tüm adımlar geçti.
+- Yeni eklenti: İnternet Haber. `/video-galeri?page=N` galerisi ve `/arama?key=...` araması okunuyor; oynatma `v.internethaber.com` MP4 adresinden. Test aracında tüm adımlar geçti.
+- Yeni eklenti: Milliyet TV. `/video` galerisi okunuyor, arama galeri üzerinden yerel; oynatma `dailymotion_player_<id>` kimliğinden Dailymotion HLS ile. Test aracında tüm adımlar geçti.
+- Yeni eklenti: Cumhuriyet TV. `/video` galerisi okunuyor, arama galeri üzerinden yerel; oynatma JSON-LD `VideoObject.contentUrl` Dailymotion kimliğinden HLS ile. Test aracında tüm adımlar geçti.
+- Yeni eklenti: Hürriyet TV. `/video` ve `/sporarena/video-galeri/` kategorileri okunuyor, arama yerel; oynatma `data-videoid` Dailymotion kimliğinden HLS ile. Test aracında tüm adımlar geçti.
+- NTV denendi; sayfadaki m3u8 adresinin jetonu süresi geçmiş olarak (`410 Gone`) döndüğü için eklenmedi.
 - DDizi, DiziGom, JetFilmizle ve TvDiziler oynatma hataları giderildi. DDizi kaçışlı video adreslerini çözüyor; DiziGom güncel `pilavyerplay` alan adını kullanıyor; JetFilmizle ölü kaynakları atlayıp tek tırnaklı VidMoly akışını doğrudan okuyor; TvDiziler `tvdiziler.tv` alan adına taşındı.
 - FilmKovasi, FullHDFilmIzlede ve WFilmIzle denendi; detay sayfaları/oynatıcıları güvenilir çalışmadığı için eklenmedi.
 - Dizipod, Dizilla, DiziPal, FilmModu ve JetFilmizle; Dizilla Next.js/JSON-LD ve Pichive oynatıcısına, JetFilmizle yeni videopark HLS akışına, DiziPal/Dizipod güncel oynatıcı adreslerine göre yenilendi.
